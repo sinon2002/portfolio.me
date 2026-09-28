@@ -46,3 +46,6 @@ footer .wrap{padding-bottom:50px;text-align:center}
 footer .wrap::before{content:"";display:block;border-top:2px solid var(--line);margin-bottom:50px}
 footer .links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:20px}
 @media(max-width:860px){.hero{grid-template-columns:1fr}.photo{max-width:400px}}
+
+.shot{position:relative;aspect-ratio:16/10;border:2px solid var(--line);border-radius:10px;background:#e4d2b3;overflow:hidden;display:grid;place-items:center;font-size:13px;color:var(--ink);opacity:.95}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}

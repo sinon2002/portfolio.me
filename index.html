@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sanabar Temir — Fullstack Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&family=Archivo+Black&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f1e8d8;--card:#fbf5ea;--ink:#3b2418;--red:#9b1116;--line:#3b2418;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#241610;--card:#2f1d15;--ink:#f1e8d8;--red:#e0443f;--line:#f1e8d8}}
+:root[data-theme="dark"]{--bg:#241610;--card:#2f1d15;--ink:#f1e8d8;--red:#e0443f;--line:#f1e8d8}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.55}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:20px 0;font-weight:500;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+nav a{color:var(--ink);text-decoration:none;margin-left:18px}
+nav a:hover{color:var(--red)}
+.hero{padding:40px 0 60px}
+.script{font-family:'Playfair Display',Georgia,serif;font-style:italic;color:var(--red);font-size:clamp(34px,7vw,64px);display:block;margin-bottom:-14px}
+h1,h2{font-family:'Archivo Black',Impact,sans-serif;text-transform:uppercase;line-height:.95;margin:0}
+h1{font-size:clamp(46px,11vw,110px)}
+h2{font-size:clamp(30px,6vw,56px);margin-bottom:28px}
+.sub{max-width:520px;margin:22px 0}
+.btn{display:inline-block;background:var(--red);color:#fff;padding:12px 26px;text-decoration:none;font-weight:500;border:2px solid var(--line);border-radius:999px}
+.folders{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.folder{width:110px;text-align:center;font-size:12px}
+.folder i{display:block;height:70px;border:2px solid var(--line);border-radius:6px 14px 8px 8px;margin-bottom:6px}
+.f1{background:#c9a27a}.f2{background:var(--red)}.f3{background:#6b3f2a}.f4{background:#e4d2b3}
+section{padding:50px 0;border-top:2px solid var(--line)}
+.about{max-width:720px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.tags span{border:2px solid var(--line);border-radius:999px;padding:4px 14px;font-size:14px;background:var(--card)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:20px}
+.case{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.case small{color:var(--red);font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+.case h3{font-family:'Archivo Black',Impact,sans-serif;text-transform:uppercase;margin:0;font-size:24px}
+.case p{margin:0}
+.case a{margin-top:auto;color:var(--red);font-weight:500;text-decoration:none}
+.case a:hover{text-decoration:underline}
+footer{padding:50px 0;text-align:center;border-top:2px solid var(--line)}
+footer .links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><b>Sanabar Temir</b><div><a href="#about">Обо мне</a><a href="#work">Работы</a><a href="#contact">Контакты</a></div></nav>
+
+<header class="hero">
+<span class="script">Portfolio</span>
+<h1>Fullstack<br>Developer</h1>
+<p class="sub">Разрабатываю веб-приложения от интерфейса до сервера: сайты, платформы и AI-инструменты.</p>
+<a class="btn" href="#contact">Связаться</a>
+<div class="folders">
+<div class="folder"><i class="f1"></i>web_01</div>
+<div class="folder"><i class="f2"></i>platform_02</div>
+<div class="folder"><i class="f3"></i>edu_03</div>
+<div class="folder"><i class="f4"></i>ai_04</div>
+</div>
+</header>
+
+<section id="about">
+<span class="script" style="font-size:40px">About me</span>
+<h2>Привет, я Санабар</h2>
+<div class="about">
+<p>Я фулстек-разработчик. Беру задачу целиком: продумываю структуру, делаю фронтенд и бэкенд, разворачиваю проект и довожу до работающего продукта.</p>
+<div class="tags"><span>Frontend</span><span>Backend</span><span>REST API</span><span>Базы данных</span><span>Деплой</span><span>AI-агенты</span></div>
+</div>
+</section>
+
+<section id="work">
+<span class="script" style="font-size:40px">Case studies</span>
+<h2>Мои работы</h2>
+<div class="grid">
+<article class="case"><small>Проект 01</small><h3>Pulsar</h3><p>Работающий веб-сайт проекта Pulsar.</p><a href="https://www.pulsar.kg/" target="_blank" rel="noopener">Открыть сайт →</a></article>
+<article class="case"><small>Проект 02</small><h3>Women Help</h3><p>Веб-приложение, развёрнутое на Vercel.</p><a href="https://women-help-psi.vercel.app/" target="_blank" rel="noopener">Открыть сайт →</a></article>
+<article class="case"><small>Проект 03</small><h3>Kyrgyz Concept Edu</h3><p>Образовательная платформа Kyrgyz Concept.</p><a href="https://edu.kyrgyzconcept.kg/" target="_blank" rel="noopener">Открыть платформу →</a></article>
+<article class="case"><small>Проект 04</small><h3>MagAgent</h3><p>Проект с открытым исходным кодом на GitHub.</p><a href="https://github.com/sanabar-temir/MagAgent" target="_blank" rel="noopener">Смотреть код →</a></article>
+</div>
+</section>
+
+<footer id="contact">
+<span class="script" style="font-size:40px">Let's talk</span>
+<h2>Контакты</h2>
+<div class="links">
+<a class="btn" href="https://github.com/sanabar-temir" target="_blank" rel="noopener">GitHub</a>
+</div>
+</footer>
+</div>
+</body>
+</html>

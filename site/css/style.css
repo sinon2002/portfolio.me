@@ -106,8 +106,8 @@ h1 .reveal-word{display:inline-block}
 
 /* === Слайд-переход между шапкой и остальным сайтом === */
 #site-header{position:relative;z-index:0}
-#content{position:relative;z-index:2;background:var(--bg);border-radius:0;box-shadow:0 -20px 40px rgba(0,0,0,.12);margin-top:clamp(-120px,-9vw,-70px);padding-top:1px}
-@media(max-width:600px){#content{margin-top:-60px}}
+#content{position:relative;z-index:2;background:var(--bg);border-radius:0;box-shadow:0 -20px 40px rgba(0,0,0,.12);margin-top:clamp(-55px,-4vw,-30px);padding-top:1px}
+@media(max-width:600px){#content{margin-top:-30px}}
 
 /* === Фон-пятно на блоке «Обо мне» === */
 #about{position:relative;isolation:isolate;overflow:hidden;border-radius:0 0 clamp(20px,3vw,40px) clamp(20px,3vw,40px)}
@@ -125,8 +125,8 @@ html{scroll-behavior:smooth}
 #site-header .hero{transition:filter .6s ease}
 
 /* === Волна, которой блок «Обо мне» накрывает шапку === */
-.wave{position:absolute;left:0;right:0;top:clamp(-120px,-9vw,-70px);height:clamp(90px,9vw,150px);overflow:hidden;z-index:1;pointer-events:none;color:var(--bg)}
-.wave-accent{position:absolute;left:0;right:0;top:clamp(-140px,-10vw,-85px);height:clamp(70px,7vw,110px);overflow:hidden;z-index:0;pointer-events:none;color:var(--red);opacity:.22}
+.wave{position:absolute;left:0;right:0;top:clamp(-65px,-5vw,-35px);height:clamp(60px,6vw,100px);overflow:hidden;z-index:1;pointer-events:none;color:var(--bg)}
+.wave-accent{position:absolute;left:0;right:0;top:clamp(-80px,-6vw,-45px);height:clamp(55px,5vw,85px);overflow:hidden;z-index:0;pointer-events:none;color:var(--red);opacity:.22}
 .wave-track{position:absolute;inset:0;display:flex;width:200%;height:100%;will-change:transform}
 .wave-track svg{width:50%;height:100%;flex:none;display:block;fill:currentColor}
 .wave-back{opacity:.55;animation:waveScroll 26s linear infinite}

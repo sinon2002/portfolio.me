@@ -68,15 +68,13 @@ footer .links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin
 .hero{position:relative;isolation:isolate}
 .mesh{position:absolute;inset:-8% -8%;z-index:-1;border-radius:0 0 48px 48px;overflow:hidden}
 .mesh::before{content:"";position:absolute;inset:-25%;background:
-  radial-gradient(40% 46% at 12% 22%, #c81118 0%, transparent 68%),
-  radial-gradient(36% 44% at 88% 12%, #8a4a2c 0%, transparent 68%),
-  radial-gradient(46% 50% at 78% 82%, #170c08 0%, transparent 70%),
-  radial-gradient(42% 48% at 18% 86%, #e9d4a8 0%, transparent 68%),
-  radial-gradient(44% 50% at 50% 46%, #f3e7cd 0%, transparent 72%),
-  radial-gradient(30% 36% at 60% 30%, #9b1116 0%, transparent 65%);
-  background-blend-mode:screen,screen,multiply,screen,normal,screen;
-  animation:meshMove 14s ease-in-out infinite alternate;
-  filter:saturate(1.3)
+  radial-gradient(40% 46% at 12% 22%, rgba(200,17,24,.85) 0%, transparent 68%),
+  radial-gradient(36% 44% at 88% 12%, rgba(138,74,44,.85) 0%, transparent 68%),
+  radial-gradient(46% 50% at 78% 82%, rgba(23,12,8,.9) 0%, transparent 70%),
+  radial-gradient(42% 48% at 18% 86%, rgba(233,212,168,.85) 0%, transparent 68%),
+  radial-gradient(44% 50% at 50% 46%, rgba(243,231,205,.8) 0%, transparent 72%),
+  radial-gradient(30% 36% at 60% 30%, rgba(155,17,22,.75) 0%, transparent 65%);
+  animation:meshMove 14s ease-in-out infinite alternate
 }
 .mesh::after{content:"";position:absolute;inset:0;background:var(--bg);mix-blend-mode:normal;opacity:.12}
 @keyframes meshMove{
@@ -105,3 +103,32 @@ h1 .reveal-word{display:inline-block}
   .reveal-word{opacity:1;transform:none;animation:none}
   .photo .frame{animation:none}
 }
+
+/* === Слайд-переход между шапкой и остальным сайтом === */
+#site-header{position:relative;z-index:0}
+#content{position:relative;z-index:2;background:var(--bg);border-radius:0;box-shadow:none;margin-top:-5vh;padding-top:1px}
+@media(max-width:600px){#content{margin-top:-5vh}}
+
+/* === Фон-пятно на блоке «Обо мне» === */
+#about{position:relative;isolation:isolate;overflow:hidden;border-radius:0 0 clamp(20px,3vw,40px) clamp(20px,3vw,40px)}
+#about .mesh{border-radius:0}
+
+/* === Текст «Обо мне» появляется и исчезает при прокрутке === */
+.scroll-word{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+#about.in .sw1{transition-delay:.05s}
+#about.in .sw2{transition-delay:.15s}
+#about.in .sw3{transition-delay:.25s}
+#about.in .sw4{transition-delay:.35s}
+#about.in .scroll-word{opacity:1;transform:translateY(0)}
+
+html{scroll-behavior:smooth}
+#site-header .hero{transition:filter .6s ease}
+
+/* === Волна, которой блок «Обо мне» накрывает шапку === */
+.wave{position:absolute;left:0;right:0;top:clamp(-70px,-9vw,-40px);height:clamp(60px,9vw,110px);overflow:hidden;z-index:1;pointer-events:none;color:var(--bg)}
+.wave-track{position:absolute;inset:0;display:flex;width:200%;height:100%;will-change:transform}
+.wave-track svg{width:50%;height:100%;flex:none;display:block;fill:currentColor}
+.wave-back{opacity:.5;animation:waveScroll 24s linear infinite}
+.wave-front{animation:waveScroll 15s linear infinite reverse}
+@keyframes waveScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.wave-track{animation:none}}

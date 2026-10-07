@@ -150,4 +150,5 @@ html{scroll-behavior:smooth}
 /* Секции теперь полупрозрачные — фон-пятно просвечивает по всему сайту */
 #content{background:color-mix(in srgb,var(--bg) 55%,transparent)}
 #about,#profile{background:transparent}
-.case,footer{background:color-mix(in srgb,var(--card) 88%,transparent)}
+.case{background:color-mix(in srgb,var(--card) 88%,transparent)}
+footer{background:transparent}

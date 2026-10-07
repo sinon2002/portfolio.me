@@ -3,7 +3,7 @@
 :root[data-theme="dark"]{--bg:#241610;--card:#2f1d15;--ink:#f1e8d8;--red:#e0443f;--line:#f1e8d8}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.55}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.55;position:relative}
 .wrap{max-width:1400px;margin:0 auto;padding:0 clamp(20px,4vw,56px)}
 nav{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:20px 0;font-weight:500;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
 nav a{color:var(--ink);text-decoration:none;margin-left:18px}
@@ -133,3 +133,21 @@ html{scroll-behavior:smooth}
 .wave-front{animation:waveScroll 15s linear infinite reverse}
 @keyframes waveScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.wave-track{animation:none}}
+
+/* === Один живой фон-пятно на весь сайт === */
+.mesh-bg{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none}
+.mesh-bg::before{content:"";position:absolute;inset:-25%;background:
+  radial-gradient(40% 46% at 12% 22%, rgba(200,17,24,.55) 0%, transparent 68%),
+  radial-gradient(36% 44% at 88% 12%, rgba(138,74,44,.55) 0%, transparent 68%),
+  radial-gradient(46% 50% at 78% 82%, rgba(23,12,8,.6) 0%, transparent 70%),
+  radial-gradient(42% 48% at 18% 86%, rgba(233,212,168,.55) 0%, transparent 68%),
+  radial-gradient(44% 50% at 50% 46%, rgba(243,231,205,.5) 0%, transparent 72%),
+  radial-gradient(30% 36% at 60% 30%, rgba(155,17,22,.5) 0%, transparent 65%);
+  animation:meshMove 20s ease-in-out infinite alternate
+}
+@media(prefers-reduced-motion:reduce){.mesh-bg::before{animation:none}}
+
+/* Секции теперь полупрозрачные — фон-пятно просвечивает по всему сайту */
+#content{background:color-mix(in srgb,var(--bg) 55%,transparent)}
+#about,#profile{background:transparent}
+.case,footer{background:color-mix(in srgb,var(--card) 88%,transparent)}

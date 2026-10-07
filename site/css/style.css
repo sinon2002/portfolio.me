@@ -124,15 +124,6 @@ h1 .reveal-word{display:inline-block}
 html{scroll-behavior:smooth}
 #site-header .hero{transition:filter .6s ease}
 
-/* === Волна, которой блок «Обо мне» накрывает шапку === */
-.wave{position:absolute;left:0;right:0;top:clamp(-65px,-5vw,-35px);height:clamp(60px,6vw,100px);overflow:hidden;z-index:1;pointer-events:none;color:var(--bg)}
-.wave-accent{position:absolute;left:0;right:0;top:clamp(-80px,-6vw,-45px);height:clamp(55px,5vw,85px);overflow:hidden;z-index:0;pointer-events:none;color:var(--red);opacity:.22}
-.wave-track{position:absolute;inset:0;display:flex;width:200%;height:100%;will-change:transform}
-.wave-track svg{width:50%;height:100%;flex:none;display:block;fill:currentColor}
-.wave-back{opacity:.55;animation:waveScroll 26s linear infinite}
-.wave-front{animation:waveScroll 15s linear infinite reverse}
-@keyframes waveScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media(prefers-reduced-motion:reduce){.wave-track{animation:none}}
 
 /* === Один живой фон-пятно на весь сайт === */
 .mesh-bg{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none}

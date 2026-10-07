@@ -140,7 +140,7 @@ html{scroll-behavior:smooth}
 @media(prefers-reduced-motion:reduce){.mesh-bg::before{animation:none}}
 
 /* Секции теперь полупрозрачные — фон-пятно просвечивает по всему сайту */
-#content{background:color-mix(in srgb,var(--bg) 55%,transparent)}
+#content{background:linear-gradient(to bottom, transparent 0, color-mix(in srgb,var(--bg) 55%,transparent) 140px)}
 #about,#profile{background:transparent}
 .case{background:color-mix(in srgb,var(--card) 88%,transparent)}
 footer{background:transparent}

@@ -16,6 +16,7 @@ h2{font-size:clamp(30px,6vw,56px);margin-bottom:28px}
 .btn{display:inline-block;background:var(--red);color:#fff;padding:12px 26px;text-decoration:none;font-weight:500;border:2px solid var(--line);border-radius:999px}
 .f1{background:#c9a27a}.f2{background:var(--red)}.f3{background:#6b3f2a}.f4{background:#e4d2b3}
 section{padding:50px 0;border-top:2px solid var(--line)}
+#about{border-top:none}
 .about{max-width:none}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .tags span{border:2px solid var(--line);border-radius:999px;padding:4px 14px;font-size:14px;background:var(--card)}
